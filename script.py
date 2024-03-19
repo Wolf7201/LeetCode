@@ -9,9 +9,7 @@ pattern = re.compile(r'(\d+)\.\s*(.+?)\.py')
 
 # Проходим по всем файлам в директории
 for filename in os.listdir(directory_path):
-    # Используем регулярное выражение для поиска соответствий
-    match = pattern.match(filename)
-    if match:
+    if match := pattern.match(filename):
         # Извлекаем номер задачи и имя без начальных цифр, точек и пробелов
         problem_number, problem_name = match.groups()
         # Убираем пробелы и точки, заменяем их на нижние подчеркивания и приводим к нижнему регистру
