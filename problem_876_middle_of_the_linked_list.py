@@ -70,11 +70,11 @@ def list_node_create(arr):
     return list_node_head
 
 
-list_node_arr = [1, 2, 3, 4, 5]
+list_node_arr = [1, 1, 2]
 head = list_node_create(list_node_arr)
 list_node_print(head)
 
 sol = Solution()
 list_node_len = sol.get_list_node_len(head)
 
-print(list_node_len // 2 + 1)
+
